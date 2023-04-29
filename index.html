@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <!-- Header (logo and score) -->
+  <header class="header">
+    <img class="logo" src="images\logo.svg" alt="Game logo">
+    <div class="score">
+      <p class="score-label">Score</p>
+      <p class="score-number">0</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Step 1 (shows options) -->
+    <section class="step1">
+      <img class="bg" src="images/bg-triangle.svg" alt="triangle">
+      <button class="shapes paper" value=2><img src="images/icon-paper.svg" alt="paper"></button>
+      <button class="shapes scissors" value=3><img src="images/icon-scissors.svg" alt="scissors"></button>
+      <button class="shapes rock" value=1><img src="images/icon-rock.svg" alt="rock"></button>
+    </section>
+
+    <!-- Step 2 (shows choices) -->
+    <section class="step2 grid mobile-tablet hide">
+      <div class="bg-empty grid-item-1"></div>
+      <div class="player shapes grid-item-1"><img src="" alt="Player choice"></div>
+      <p class="grid-item-2">You picked</p>
+      <div class="bg-empty grid-item-3"></div>
+      <div class="house shapes grid-item-3 hide"><img src="" alt="House choice"></div>
+      <p class="grid-item-4">The house picked</p>
+    </section>
+
+    <!-- <section class="step2 grid desktop hide">
+      <p class="grid-item-1">You picked</p>
+      <div class="player shapes scissors grid-item-2"><img src="images/icon-scissors.svg" alt="Scissors"></div>
+      <p class="grid-item-3">The house picked</p>
+      <div class="bg-empty grid-item-4"></div>
+      <div class="house shapes rock grid-item-4"><img src="images/icon-rock.svg" alt="Rock"></div>
+    </section> -->
+
+    <!-- Step 3 (shows winner) -->
+    <section class="step3 mobile-tablet hide">
+      <div class="grid">
+        <div class="player winner grid-item-1 hide"></div>
+        <div class="player shapes grid-item-1"><img src="" alt="Player"></div>
+        <p class="grid-item-2">You picked</p>
+        <div class="house winner grid-item-3 hide"></div>
+        <div class="house shapes grid-item-3"><img src="" alt="House"></div>
+        <p class="grid-item-4">The house picked</p>
+      </div>
+      <p class="result draw hide">Draw</p>
+      <p class="result you-win hide">You win</p>
+      <p class="result you-lose hide">You lose</p>
+      <button class="play-again">Play again</button>
+    </section>
+
+    <!-- <section class="step3 grid desktop hide">
+      <p class="grid-item-1">You picked</p>
+      <div class="player-win grid-item-2 "></div>
+      <div class="shapes scissors grid-item-2"><img src="images/icon-scissors.svg" alt="Scissors"></div>
+      <div class="grid-item-4">
+        <p class="result you-win">You win</p>
+        <p class="result you-lose d">You lose</p>
+        <button class="play-again">Play again</button>
+      </div>
+      <p class="grid-item-5">The house picked</p>
+      <div class="house-win grid-item-6 d"></div>
+      <div class="shapes rock grid-item-6"><img src="images/icon-rock.svg" alt="Rock"></div>
+    </section> -->
+
+    <!-- Rules button -->
+    <button class="rules-btn ">Rules</button>
+  </main>
+
+  <!-- Rules instructions -->
+  <section class="rules-instr mobile-tablet hide">
+    <p class="rules-instr-text">Rules</p>
+    <img class="rules-instr-image" src="images/image-rules.svg"
+      alt="Game rules are rock beats scissors, scissors beats paper, and paper beats rock">
+    <img class="rules-instr-close" src="images/icon-close.svg" alt="Close game rules">
+  </section>
+
+  <!-- <section class="rules-instr desktop hide">
+    <div class="rules-instr-bg">
+      <div class="rules-instr-header">
+        <p class="rules-instr-text">Rules</p>
+        <img class="rules-instr-close" src="images/icon-close.svg" alt="Close game rules">
+      </div>
+      <img class="rules-instr-image" src="images/image-rules.svg"
+        alt="Game rules are rock beats scissors, scissors beats paper, and paper beats rock">
+    </div>
+  </section> -->
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
